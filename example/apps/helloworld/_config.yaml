@@ -1,0 +1,7 @@
+---
+namespace: default
+clusters:
+  - stage
+env: stage
+values:
+  foo: bar

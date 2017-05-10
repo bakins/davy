@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+DIR="$( dirname $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ) )"
+NAME=davy
+ARCH=amd64
+
+for OS in darwin linux; do
+    CGO_ENABLED=0 GOOS=${OS} GOARCH=${ARCH} go build -o ${NAME}.${OS}.${ARCH} ./cmd/${NAME}
+done
