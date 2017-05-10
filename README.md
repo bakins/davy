@@ -8,7 +8,7 @@ This is really more of an idea sketched out in code. This README represents what
 I envision in such a tool and not necessarily what it does currently.
 
 It's named for [Davy Jones](https://en.wikipedia.org/wiki/Davy_Jones%27_Locker)
-as container related projects seemed to have nautical themes.
+as container related projects always seem to have nautical themes.
 
 ## Philosophy/Approach
 
