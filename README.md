@@ -115,7 +115,7 @@ The following data structure is presented to the template:
 * Values
 
 So, AppName can be referenced in the template as `{{ .AppName }}`. A key "foo" from
-the metadata files can be referenced as "{{ .Values.foo }}"
+the metadata files can be referenced as `{{ .Values.foo }}`
 
 
 ## TODO
