@@ -1,0 +1,23 @@
+#!/bin/bash
+set -e
+
+# example kubectl apply wrapper
+
+DIR=$1
+if [ -z ${DIR} ]; then
+    echo "need directory"
+    exit -1
+fi
+
+shift
+
+DIR="$( cd ${DIR} && pwd )"
+
+for cluster in ${DIR}/*; do
+    cluster=`basename ${cluster}`
+    for namespace in ${DIR}/${cluster}/*; do
+        namespace=`basename ${namespace}`
+        kubectl create --context=${cluster} namespace  $@
+        kubectl apply --context=${cluster} --recursive --filename=${namespace} $@
+    done
+done
