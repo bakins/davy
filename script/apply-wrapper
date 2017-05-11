@@ -17,7 +17,7 @@ for cluster in ${DIR}/*; do
     cluster=`basename ${cluster}`
     for namespace in ${DIR}/${cluster}/*; do
         namespace=`basename ${namespace}`
-        kubectl create --context=${cluster} namespace  $@
+        kubectl create --context=${cluster} namespace ${namespace} $@
         kubectl apply --context=${cluster} --recursive --filename=${namespace} $@
     done
 done
